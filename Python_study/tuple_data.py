@@ -67,10 +67,55 @@
 # print((i-1) ** 2) 
 # 4 ** 0.5 이것도 제곱근 구하는 방법이다
 
-
 # while True:
-#   if i * i > n:
+#   if i * i >= n:
 #       break # while 문을 빠져나간다
 #   answer = 1 ** 2
 #   i += 1
 # print(answer)
+
+# [1, 2, 3, 4, 5]
+# [10, 20, 30, 40, 50]
+# [532, 5941, 54682, 58, 5]
+# 3개의 리스트에서 같은 인덱스의 값끼리 더하여 출력하세요
+
+# li_1 = [1, 2, 3, 4, 5]
+# li_2 = [10, 20, 30, 40, 50]
+# li_3 = [532, 5941, 54682, 58, 5]
+# for i in range(len(li_1)):
+#     print(int(li_1[i])+int(li_2[i])+int(li_3[i]))
+
+# zip()
+# 길이가 같은 list를 묶어서 for문 등으로 사용가능한 iterable을 반환한다
+# for x, y, z in zip(li_1, li_2, li_3): # [1,10,532], [2,20,5941] ...
+#     print(x + y + z) # 3개씩 들어가있으니까 변수 3개 줘서 하나씩 꺼낸다
+
+# i = 0
+# while i < 5:
+#     print(int(li_1[i])+int(li_2[i])+int(li_3[i]))
+#     i += 1
+
+# 정수를 입력받고 1부터 입력받은 정수까지 모두 출력하세요
+# 단, 숫자에 3, 6, 9가 들어있는 경우 숫자 대신 짝 이라고 출력하세요 (3,6,9 게임)
+
+# n = int(input("정수를 입력하세요"))
+# for i in range(1,n+1):
+#     answer = i
+#     for j in str(i): # 문자형으로 바꾸고 for문에서 쓴다
+#         if int(j) % 3 == 0 and j !="0":
+#             answer = "짝"
+#             break
+#     print(answer)
+
+# 정수를 입력받고 그 정수의 약수를 모두 출력하세요.
+# 약수 : 나누었을 때 나머지가 0으로 나누어 떨어지게 하는 수
+
+# num = int(input("정수를 입력하세요 "))
+# for i in range(1,num+1):
+#     if num % i == 0:
+#         print(i)
+# i = 1
+# while i <= num:
+#     if num % i == 0:
+#         print(i)
+#     i += 1
